@@ -1,0 +1,15 @@
+{
+  "name": "p3-francesco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass/main.scss:public/css/style.css sass/restaurant.scss:public/css/restaurant.css sass/restaurant2.scss:public/css/restaurant2.css sass/restaurant3.scss:public/css/restaurant3.css sass/restaurant4.scss:public/css/restaurant4.css"
+  },
+  "author": "francesco",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.45.1"
+  }
+}

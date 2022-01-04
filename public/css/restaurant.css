@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,700&family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  background-color: #f0f0f0;
+}
+
+#logo_header {
+  display: flex;
+}
+#logo_header .logo_h {
+  height: 44%;
+  width: 44%;
+  margin: 20px 0 15px 70px;
+}
+#logo_header .fa-arrow-left {
+  content: "\f060";
+  margin-left: 25px;
+  font-size: 20px;
+  align-self: center;
+}
+
+.alafranc {
+  object-fit: cover;
+  width: 100%;
+  height: 275px;
+}
+
+.titre_menu {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  position: relative;
+  margin-top: -58px;
+  border-radius: 40px 40px 0 0;
+  height: 105px;
+  font-family: "Shrikhand", cursive;
+  font-size: 29px;
+}
+.titre_menu .span_titre {
+  margin-left: 18px;
+}
+.titre_menu .fa-heart {
+  margin-left: 90px;
+  font-size: 24px;
+}
+
+.entrees, .plats, .desserts {
+  display: flex;
+  flex-direction: column;
+  padding: 0 14px 40px;
+  gap: 15px;
+}
+.entrees .balise_plat, .plats .balise_plat, .desserts .balise_plat {
+  display: grid;
+  grid-template-columns: [first] 6fr [end] 1fr;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 1px 3px 12px #cecece;
+  padding: 12px;
+}
+.entrees .balise_plat .nom_plat, .plats .balise_plat .nom_plat, .desserts .balise_plat .nom_plat {
+  font-weight: bold;
+  padding-bottom: 3px;
+  font-size: 18px;
+  grid-column-start: 1;
+}
+.entrees .balise_plat .desc_plat, .plats .balise_plat .desc_plat, .desserts .balise_plat .desc_plat {
+  font-weight: normal;
+  font-size: 15px;
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.entrees .balise_plat .prix_plat, .plats .balise_plat .prix_plat, .desserts .balise_plat .prix_plat {
+  font-family: sans-serif;
+  font-weight: bold;
+  justify-self: center;
+  font-size: 16px;
+  grid-column: 2;
+  grid-row-start: 2;
+}
+
+.titre_h1 {
+  font-size: 16px;
+  padding-bottom: 5px;
+  font-weight: normal;
+  border-bottom: 3px solid #89d1bf;
+  width: 41px;
+}
+
+.button_com {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 82px;
+}
+.button_com .span_com {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  height: 50px;
+  width: 190px;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  font-size: 15px;
+}
+
+footer {
+  padding: 0 20px;
+  background-color: #353535;
+  color: white;
+  height: 200px;
+}
+footer .logo_f {
+  height: 30%;
+  width: 30%;
+  margin: 25px 0 20px;
+  filter: invert(100%) sepia(5%) saturate(16%) hue-rotate(218deg) brightness(105%) contrast(100%);
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin-bottom: 8px;
+}
+footer ul li .mobile_svg::before {
+  content: "\f2e7";
+  margin-right: 12px;
+  font-size: 12px;
+}
+footer ul li .hands_svg::before {
+  content: "\f4c4";
+  margin-right: 8px;
+  font-size: 11px;
+}
+
+/*# sourceMappingURL=restaurant.css.map */
