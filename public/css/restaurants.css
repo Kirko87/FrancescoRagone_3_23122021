@@ -9,6 +9,37 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+footer {
+  padding: 0 20px;
+  background-color: #353535;
+  color: white;
+  height: 200px;
+}
+
+.footer-div_logo {
+  height: 30%;
+  width: 30%;
+  margin: 25px 0 20px;
+  filter: invert(100%) sepia(5%) saturate(16%) hue-rotate(218deg) brightness(105%) contrast(100%);
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  margin-bottom: 8px;
+}
+ul li .mobile_svg::before {
+  content: "\f2e7";
+  margin-right: 12px;
+  font-size: 12px;
+}
+ul li .hands_svg::before {
+  content: "\f4c4";
+  margin-right: 8px;
+  font-size: 11px;
+}
+
 main {
   background-color: #f0f0f0;
 }
@@ -51,6 +82,10 @@ main {
 .titre_menu .fa-heart {
   margin-left: 90px;
   font-size: 24px;
+}
+
+.plats {
+  background-color: red;
 }
 
 .entrees, .plats, .desserts {
@@ -114,33 +149,49 @@ main {
   font-size: 15px;
 }
 
-footer {
-  padding: 0 20px;
-  background-color: #353535;
+.plat {
+  display: grid;
+  border-radius: 5px;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "nom price checkbox" "description price checkbox";
+  background-color: white;
+  overflow: hidden;
+}
+.plat_nom {
+  grid-area: nom;
+  padding: 0.5rem;
+}
+.plat_description {
+  grid-area: description;
+  padding: 0.5rem;
+}
+.plat_price {
+  grid-area: price;
+  padding: 0.5rem;
+}
+.plat_checkbox {
+  grid-area: checkbox;
+  background-color: green;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -50px;
+  transition: margin-right 1s;
+}
+.plat_checkbox_icon {
   color: white;
-  height: 200px;
 }
-footer .logo_f {
-  height: 30%;
-  width: 30%;
-  margin: 25px 0 20px;
-  filter: invert(100%) sepia(5%) saturate(16%) hue-rotate(218deg) brightness(105%) contrast(100%);
+.plat:hover .plat_checkbox {
+  margin-right: 0;
 }
-footer ul {
-  list-style: none;
-}
-footer ul li {
-  margin-bottom: 8px;
-}
-footer ul li .mobile_svg::before {
-  content: "\f2e7";
-  margin-right: 12px;
-  font-size: 12px;
-}
-footer ul li .hands_svg::before {
-  content: "\f4c4";
-  margin-right: 8px;
-  font-size: 11px;
+.plat:hover .plat_checkbox_icon {
+  transform: rotateZ(-360deg);
+  transition: transform 1s;
 }
 
-/*# sourceMappingURL=restaurant.css.map */
+@keyframes monAnimation {}
+
+/*# sourceMappingURL=restaurants.css.map */

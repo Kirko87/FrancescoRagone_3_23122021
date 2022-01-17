@@ -1,0 +1,36 @@
+.explorer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 0;
+    background-color: rgb(246, 246, 246);
+    &_title {
+      margin: 0px 55px 15px;
+      font-size: 24px;  
+      text-align: center;
+    }
+    &_content {
+      font-family: 'Raleway';
+      font-size: 17px;
+      margin: 0 16px 33px;
+      text-align: center;
+    }
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      color: white;
+      font-weight: 400;
+      border-radius: 25px;
+      margin: 0 35px 24px;
+      height: 50px;
+      width: max-content;
+      background: linear-gradient(172deg,#FF79DA, #9356DC);
+          &_span {
+            margin: 0 24px;
+            font-size: 15px;  
+    }
+    }
+  }
+  

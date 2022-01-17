@@ -2,3 +2,7 @@
     border: 1px solid $color;
     border-radius: 5px;
 }
+
+.bouton {
+    @include border-radius();
+}
