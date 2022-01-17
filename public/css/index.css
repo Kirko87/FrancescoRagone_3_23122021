@@ -41,7 +41,7 @@ body {
 .explorer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: center;
   justify-content: center;
   padding: 36px 0;
   background-color: #f6f6f6;
@@ -59,25 +59,25 @@ body {
 }
 .explorer_button {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-self: center;
   justify-content: center;
   color: white;
   font-weight: 400;
   border-radius: 25px;
-  margin: 0 35px 24px;
   height: 50px;
-  width: max-content;
   background: linear-gradient(172deg, #FF79DA, #9356DC);
+  margin: 0 35px 24px;
 }
 .explorer_button_span {
   margin: 0 24px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #fonctions {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: center;
   justify-content: center;
   gap: 22px;
   padding: 40px 20px 67px;
@@ -86,13 +86,11 @@ body {
 .fonction {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 25px;
   border-radius: 20px;
   box-shadow: 1px 3px 12px #cecece;
   background-color: #f6f6f6;
   height: 72px;
-  width: 325px;
   margin-left: 8px;
 }
 .fonction_title {
@@ -107,24 +105,22 @@ body {
   justify-content: center;
   position: absolute;
   border-radius: 12px;
-  margin-left: -319px;
   height: 25px;
   width: 25px;
   background-color: #9356DC;
   color: white;
+  margin-left: -12px;
 }
 .fonction_ico_portable, .fonction_ico_list, .fonction_ico_boutique {
   height: 20px;
   width: 20px;
-  margin-left: -40px;
+  margin-left: 35px;
   filter: invert(44%) sepia(96%) saturate(7%) hue-rotate(24deg) brightness(94%) contrast(93%);
 }
 .fonction_span {
   justify-self: center;
   font-weight: 600;
-  font-size: 16px;
 }
-
 .fonction:hover {
   background-color: #f0e3ff;
 }
@@ -135,6 +131,8 @@ body {
 #restaurants {
   display: flex;
   flex-direction: column;
+  align-self: center;
+  justify-content: center;
   gap: 18px;
   padding: 38px 20px 65px;
   background-color: #f6f6f6;
@@ -158,7 +156,7 @@ body {
   object-fit: cover;
   width: 100%;
   height: 175px;
-  object-position: 0px -47px;
+  object-position: 0px -55px;
 }
 .figure-index .fig-noteench_img {
   object-fit: cover;

@@ -9,6 +9,21 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.header-menu {
+  display: flex;
+}
+.header-menu .fa-arrow-left {
+  content: "\f060";
+  margin-left: 25px;
+  font-size: 20px;
+  align-self: center;
+}
+.header-menu_logo {
+  height: 44%;
+  width: 44%;
+  margin: 20px 0 15px 70px;
+}
+
 footer {
   padding: 0 20px;
   background-color: #353535;
@@ -44,21 +59,6 @@ main {
   background-color: #f0f0f0;
 }
 
-#logo_header {
-  display: flex;
-}
-#logo_header .logo_h {
-  height: 44%;
-  width: 44%;
-  margin: 20px 0 15px 70px;
-}
-#logo_header .fa-arrow-left {
-  content: "\f060";
-  margin-left: 25px;
-  font-size: 20px;
-  align-self: center;
-}
-
 .alafranc {
   object-fit: cover;
   width: 100%;
@@ -84,43 +84,11 @@ main {
   font-size: 24px;
 }
 
-.plats {
-  background-color: red;
-}
-
 .entrees, .plats, .desserts {
   display: flex;
   flex-direction: column;
   padding: 0 14px 40px;
   gap: 15px;
-}
-.entrees .balise_plat, .plats .balise_plat, .desserts .balise_plat {
-  display: grid;
-  grid-template-columns: [first] 6fr [end] 1fr;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 1px 3px 12px #cecece;
-  padding: 12px;
-}
-.entrees .balise_plat .nom_plat, .plats .balise_plat .nom_plat, .desserts .balise_plat .nom_plat {
-  font-weight: bold;
-  padding-bottom: 3px;
-  font-size: 18px;
-  grid-column-start: 1;
-}
-.entrees .balise_plat .desc_plat, .plats .balise_plat .desc_plat, .desserts .balise_plat .desc_plat {
-  font-weight: normal;
-  font-size: 15px;
-  grid-column-start: 1;
-  grid-row-start: 2;
-}
-.entrees .balise_plat .prix_plat, .plats .balise_plat .prix_plat, .desserts .balise_plat .prix_plat {
-  font-family: sans-serif;
-  font-weight: bold;
-  justify-self: center;
-  font-size: 16px;
-  grid-column: 2;
-  grid-row-start: 2;
 }
 
 .titre_h1 {
@@ -131,24 +99,6 @@ main {
   width: 41px;
 }
 
-.button_com {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0 82px;
-}
-.button_com .span_com {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  border-radius: 25px;
-  height: 50px;
-  width: 190px;
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
-  font-size: 15px;
-}
-
 .plat {
   display: grid;
   border-radius: 5px;
@@ -157,22 +107,28 @@ main {
   grid-template-areas: "nom price checkbox" "description price checkbox";
   background-color: white;
   overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 1px 3px 12px #cecece;
 }
 .plat_nom {
   grid-area: nom;
-  padding: 0.5rem;
+  padding: 10px 10px 0;
+  font-weight: bold;
+  font-size: 19px;
 }
 .plat_description {
   grid-area: description;
-  padding: 0.5rem;
+  padding: 5px 12px 10px 12px;
 }
 .plat_price {
   grid-area: price;
-  padding: 0.5rem;
+  padding: 0 24px 10px 0;
+  font-weight: bold;
+  align-self: end;
 }
 .plat_checkbox {
   grid-area: checkbox;
-  background-color: green;
+  background-color: #89d1bf;
   width: 50px;
   height: 100%;
   display: flex;
@@ -193,5 +149,25 @@ main {
 }
 
 @keyframes monAnimation {}
+.button-com {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  color: white;
+  font-weight: 400;
+  border-radius: 25px;
+  height: 50px;
+  background: linear-gradient(172deg, #FF79DA, #9356DC);
+  margin: 40px 0;
+}
+.button-com_span {
+  margin: 0 50px;
+  font-size: 16px;
+}
 
 /*# sourceMappingURL=restaurants.css.map */

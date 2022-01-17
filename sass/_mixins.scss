@@ -1,8 +1,25 @@
-@mixin border-radius($color: black) {
-    border: 1px solid $color;
-    border-radius: 5px;
+@mixin box-resto{
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 255px;
+    box-shadow: 0px 2px 10px rgb(207, 207, 207);
 }
 
-.bouton {
-    @include border-radius();
+@mixin flex-layout{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
 }
+
+@mixin button{
+        @include flex-layout;
+        color: white;
+        font-weight: 400;
+        border-radius: 25px;
+        height: 50px;
+        background: linear-gradient(172deg,#FF79DA, #9356DC);
+      }
+
+      

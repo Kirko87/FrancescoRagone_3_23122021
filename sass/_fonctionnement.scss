@@ -1,8 +1,5 @@
 #fonctions
-{display: flex;
- flex-direction: column;  
- align-items: center;
-   justify-content: center; 
+{@include flex-layout;
  gap: 22px; 
  padding: 40px 20px 67px;
 }
@@ -10,13 +7,11 @@
 .fonction {
     display: flex;
     align-items: center;
-    justify-content: center; 
     gap: 25px;
     border-radius: 20px;
     box-shadow: 1px  3px  12px rgb(206, 206, 206);        
     background-color: rgb(246, 246, 246);
     height: 72px;
-    width: 325px;
     margin-left: 8px;
     &_title { 
       margin: 10px 0;
@@ -30,31 +25,28 @@
       justify-content: center;
       position:absolute;
       border-radius: 12px;
-      margin-left: -319px;
       height: 25px;
       width: 25px;  
       background-color: #9356DC;
       color: white;
+      margin-left: -12px;
     }
     &_ico_portable, &_ico_list, &_ico_boutique {
       height: 20px;
       width: 20px;  
-      margin-left: -40px;
+      margin-left: 35px;
       filter: invert(44%) sepia(96%) saturate(7%) 
               hue-rotate(24deg) brightness(94%) contrast(93%);
     }
     &_span {
       justify-self: center;
       font-weight: 600;  
-      font-size: 16px;
     }
-  }
-  
-  .fonction:hover 
+    &:hover 
   { background-color: rgb(240,227,255);
      .fonction_ico_portable, .fonction_ico_list, .fonction_ico_boutique{
          filter:invert(51%) sepia(75%) saturate(5006%) 
          hue-rotate(243deg) brightness(91%) contrast(89%);   
      }
   }
-  
+  }
