@@ -1,0 +1,89 @@
+main{
+  background-color: rgb(240, 240, 240);
+}
+
+.titre_h1{
+  font-size: 16px;
+  padding-bottom: 5px;
+  font-weight:normal;
+  border-bottom: 3px solid rgb(137, 209, 191);
+  width: 41px;
+ }
+
+.entrees, .plats, .desserts
+{ display: flex;
+  flex-direction: column;
+  padding: 0 14px 40px;
+  gap: 15px;
+}
+
+.plat {
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'nom price checkbox' 'description price checkbox';
+    background-color: white;
+    overflow: hidden;
+    border-radius: 15px;
+      box-shadow: 1px 3px 12px #cecece;
+    &_nom {
+      grid-area: nom;
+      padding:10px 10px 0;
+      font-weight: bold;
+      font-size: 19px;
+    }
+    &_description {
+      grid-area: description;
+      padding:5px 12px 10px 12px;
+    }
+    &_price {
+      grid-area: price;
+      padding:0 24px 10px 0;
+      font-weight: bold;
+      align-self: end;
+    }
+    &_checkbox {
+      grid-area: checkbox;
+      background-color: rgb(137, 209, 191);
+      width: 50px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: -50px;
+      transition: margin-right 1s;
+      &_icon {
+        color: white;
+      }
+    }
+  
+    &:hover {
+      .plat {
+        &_checkbox {
+          margin-right: 0;
+          &_icon {
+            transform: rotateZ(-360deg);
+            transition: transform 1s;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes monAnimation {
+    0% {
+      
+    }
+  }
+
+  
+.button-com
+{@include flex-layout;
+  @include button;
+  margin: 40px 0;
+  &_span {
+    margin: 0 50px;
+    font-size: 16px;  
+}
+}

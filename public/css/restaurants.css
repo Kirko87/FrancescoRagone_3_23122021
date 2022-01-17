@@ -24,42 +24,7 @@ body {
   margin: 20px 0 15px 70px;
 }
 
-footer {
-  padding: 0 20px;
-  background-color: #353535;
-  color: white;
-  height: 200px;
-}
-
-.footer-div_logo {
-  height: 30%;
-  width: 30%;
-  margin: 25px 0 20px;
-  filter: invert(100%) sepia(5%) saturate(16%) hue-rotate(218deg) brightness(105%) contrast(100%);
-}
-
-ul {
-  list-style: none;
-}
-ul li {
-  margin-bottom: 8px;
-}
-ul li .mobile_svg::before {
-  content: "\f2e7";
-  margin-right: 12px;
-  font-size: 12px;
-}
-ul li .hands_svg::before {
-  content: "\f4c4";
-  margin-right: 8px;
-  font-size: 11px;
-}
-
-main {
-  background-color: #f0f0f0;
-}
-
-.alafranc {
+.image-restaurant {
   object-fit: cover;
   width: 100%;
   height: 275px;
@@ -84,11 +49,8 @@ main {
   font-size: 24px;
 }
 
-.entrees, .plats, .desserts {
-  display: flex;
-  flex-direction: column;
-  padding: 0 14px 40px;
-  gap: 15px;
+main {
+  background-color: #f0f0f0;
 }
 
 .titre_h1 {
@@ -97,6 +59,13 @@ main {
   font-weight: normal;
   border-bottom: 3px solid #89d1bf;
   width: 41px;
+}
+
+.entrees, .plats, .desserts {
+  display: flex;
+  flex-direction: column;
+  padding: 0 14px 40px;
+  gap: 15px;
 }
 
 .plat {
@@ -168,6 +137,37 @@ main {
 .button-com_span {
   margin: 0 50px;
   font-size: 16px;
+}
+
+footer {
+  padding: 0 20px;
+  background-color: #353535;
+  color: white;
+  height: 200px;
+}
+
+.footer-div_logo {
+  height: 30%;
+  width: 30%;
+  margin: 25px 0 20px;
+  filter: invert(100%) sepia(5%) saturate(16%) hue-rotate(218deg) brightness(105%) contrast(100%);
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  margin-bottom: 8px;
+}
+ul li .mobile_svg::before {
+  content: "\f2e7";
+  margin-right: 12px;
+  font-size: 12px;
+}
+ul li .hands_svg::before {
+  content: "\f4c4";
+  margin-right: 8px;
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=restaurants.css.map */
