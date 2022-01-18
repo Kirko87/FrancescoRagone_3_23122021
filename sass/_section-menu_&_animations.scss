@@ -24,18 +24,20 @@ main{
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 'nom price checkbox' 'description price checkbox';
     background-color: white;
-    overflow: hidden;
     border-radius: 15px;
-      box-shadow: 1px 3px 12px #cecece;
+    box-shadow: 1px 3px 12px #cecece;
+    overflow: hidden;
     &_nom {
       grid-area: nom;
       padding:10px 10px 0;
       font-weight: bold;
       font-size: 19px;
+      @include ellipsis;
     }
     &_description {
       grid-area: description;
       padding:5px 12px 10px 12px;
+      @include ellipsis;
     }
     &_price {
       grid-area: price;
@@ -46,15 +48,16 @@ main{
     &_checkbox {
       grid-area: checkbox;
       background-color: rgb(137, 209, 191);
-      width: 50px;
+      width: 60px;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: -50px;
+      margin-right: -60px;
       transition: margin-right 1s;
       &_icon {
         color: white;
+        font-size: 20px;
       }
     }
   

@@ -22,4 +22,8 @@
         background: linear-gradient(172deg,#FF79DA, #9356DC);
       }
 
-      
+@mixin ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}      
