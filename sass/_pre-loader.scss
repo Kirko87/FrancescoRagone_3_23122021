@@ -40,9 +40,6 @@
     border: 7px solid rgb(24, 24, 24);
     border-color: $color-tertiaire  transparent $color-secondaire transparent;
     animation: dual-ring  2.3s cubic-bezier(.23,.23,0,.68);
-   
     animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    
   }
   

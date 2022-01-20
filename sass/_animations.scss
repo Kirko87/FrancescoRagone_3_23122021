@@ -54,10 +54,14 @@
 }
 
 @keyframes text-preloader {
-0%{
+0%{font-size: 100%;
    user-select: none;
 }
+90%{
+    font-size: 110%;
+}
 100%{ 
+    font-size: 110%;
     user-select: none;
     color: transparent;
     text-shadow: 1px 1px 1px transparent;
