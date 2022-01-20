@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,700&family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @keyframes logo-preloader {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
   32% {
     width: 50%;
     height: 14%;
@@ -29,6 +33,9 @@
   42% {
     background: white;
   }
+  70% {
+    background: rgba(255, 255, 255, 0);
+  }
   100% {
     background: rgba(255, 255, 255, 0);
     pointer-events: none;
@@ -38,29 +45,20 @@
   0% {
     transform: rotate(0deg);
   }
-  40% {
-    transform: rotate(360deg);
-  }
-  41% {
-    transform: rotate(0deg);
-  }
-  80% {
-    transform: rotate(360deg);
-  }
-  81% {
-    transform: rotate(0deg);
-  }
-  95% {
-    transform: rotate(360deg);
-  }
   100% {
+    transform: rotate(360deg);
     width: 0;
     border-color: transparent;
   }
 }
 @keyframes text-preloader {
+  0% {
+    user-select: none;
+  }
   100% {
+    user-select: none;
     color: transparent;
+    text-shadow: 1px 1px 1px transparent;
   }
 }
 @keyframes effetto-sfocato {
@@ -76,15 +74,17 @@
 .header_logo_preloader {
   margin-top: 50%;
   position: absolute;
-  animation: logo-preloader 1.2s cubic-bezier(0.23, 0.23, 0, 0.97);
+  animation: logo-preloader 2s cubic-bezier(0.23, 0.23, 0, 0.97);
   animation-fill-mode: forwards;
 }
 
 .pre-loader_text {
+  font-family: "Raleway", sans-serif;
   font-size: 2.1rem;
+  text-shadow: 1px 1px 1px black;
   color: #FF79DA;
   margin-top: 110%;
-  animation: text-preloader 1s linear;
+  animation: text-preloader 2s linear;
   animation-fill-mode: forwards;
 }
 
@@ -97,21 +97,21 @@
   right: 0;
   top: 0;
   z-index: 1001;
-  animation: backgr-transparent 3s;
+  animation: backgr-transparent 5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 
 .dual-ring {
   display: block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   margin-top: 82%;
   position: fixed;
   border-radius: 50%;
   border: 7px solid #181818;
   border-color: #99E2D0 transparent #FF79DA transparent;
-  animation: dual-ring 1.5s cubic-bezier(0.23, 0.23, 0, 0.68);
+  animation: dual-ring 2.3s cubic-bezier(0.23, 0.23, 0, 0.68);
   animation-fill-mode: forwards;
   animation-timing-function: linear;
 }

@@ -1,5 +1,6 @@
 @keyframes logo-preloader {
-    0% {
+    0% {width: 100%;
+        height: 100%;
     }
     32%{
      width: 50%;
@@ -31,9 +32,12 @@
     42%{
       background: rgb(255, 255, 255);
     }
-    100% {
+    70% {
       background: rgba(255, 255, 255, 0);
-      pointer-events: none;
+    }
+    100%{
+        background: rgba(255, 255, 255, 0);
+        pointer-events: none ;
     }
 }
 
@@ -41,22 +45,9 @@
   0% {
     transform: rotate(0deg);
   }
-  40% {
-    transform: rotate(360deg)
-  }
-  41%{
-    transform: rotate(0deg)
-  }
-  80%{
-    transform: rotate(360deg)
-  }
-  81%{
-    transform: rotate(0deg)
-  }
-  95%{
-    transform: rotate(360deg);
-  }
+
   100% {
+    transform: rotate(360deg);
     width: 0;
     border-color: transparent;
   }
@@ -64,10 +55,12 @@
 
 @keyframes text-preloader {
 0%{
-
+   user-select: none;
 }
-100%{
+100%{ 
+    user-select: none;
     color: transparent;
+    text-shadow: 1px 1px 1px transparent;
 }
 }
 
