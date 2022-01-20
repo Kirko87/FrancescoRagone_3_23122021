@@ -1,0 +1,46 @@
+.header_logo_preloader{
+  margin-top: 50%;
+  position: absolute;
+  animation: logo-preloader 1.2s cubic-bezier(.23,.23,0,.97);
+  animation-fill-mode: forwards;   
+  
+}
+.pre-loader_text{
+  font-size: 2.1rem;
+  color: $color-secondaire;
+  margin-top: 110%;
+  animation: text-preloader 1s linear;
+  animation-fill-mode: forwards;   
+}
+ 
+.pre-loader {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1001;   
+    animation: backgr-transparent 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;    
+}
+
+
+.dual-ring {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 82%;  
+    position: fixed;
+    border-radius: 50%;
+    border: 7px solid rgb(24, 24, 24);
+    border-color: $color-tertiaire  transparent $color-secondaire transparent;
+    animation: dual-ring  1.5s cubic-bezier(.23,.23,0,.68);
+   
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    
+  }
+  

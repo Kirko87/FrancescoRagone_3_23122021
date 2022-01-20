@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: center;  
-  box-shadow: 0 3px 3px rgb(207, 207, 207);
+  box-shadow: 0 3px 3px $color-shadow;
   position: relative;
   &_logo {
     height: 45%;
@@ -15,7 +15,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgb(234, 234, 234);
+  background-color: $color-position-background;
   &_ico_marker { 
     height: 16px;
     width: 16px;  

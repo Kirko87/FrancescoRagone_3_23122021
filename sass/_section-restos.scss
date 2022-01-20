@@ -2,7 +2,7 @@
 {  @include flex-layout;
     gap: 18px;
     padding: 38px 20px 65px;
-    background-color: rgb(246, 246, 246);
+    background-color: $color-background;
 }
 .restaurant_title
 { margin: 10px 0;
@@ -49,6 +49,11 @@
        grid-row-start: 1;
        grid-row-end:3;
        margin-right: 15px;
+       &:checked{
+         pointer-events: auto;
+         cursor: pointer;
+         background-color: $color-primaire;
+       }
 }
 }
 }

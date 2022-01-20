@@ -5,10 +5,17 @@
         margin-left: 25px;
         font-size: 20px;
         align-self: center;
+        pointer-events: stroke;
     }
     &_logo{
       height: 44%;
       width: 44%;
       margin: 20px 0 15px 70px;
     }
+}
+
+.arrow{
+  display: flex;
+  text-decoration: none;
+  pointer-events: none;
 }

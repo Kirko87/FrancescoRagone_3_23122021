@@ -1,23 +1,24 @@
 main{
-  background-color: rgb(240, 240, 240);
+  background-color: $color-background;
 }
 
 .titre_h1{
   font-size: 16px;
   padding-bottom: 5px;
   font-weight:normal;
-  border-bottom: 3px solid rgb(137, 209, 191);
+  border-bottom: 3px solid $color-tertiaire;
   width: 41px;
  }
 
 .entrees, .plats, .desserts
 { display: flex;
   flex-direction: column;
-  padding: 0 14px 40px;
+  padding: 0px 14px 40px;
   gap: 15px;
 }
 
 .plat {
+    @include progressive-animation-list;
     display: grid;
     border-radius: 5px;
     grid-template-columns: 1fr auto auto;
@@ -25,36 +26,41 @@ main{
     grid-template-areas: 'nom price checkbox' 'description price checkbox';
     background-color: white;
     border-radius: 15px;
-    box-shadow: 1px 3px 12px #cecece;
+    box-shadow: 1px 3px 12px $color-shadow;
     overflow: hidden;
+    animation: 500ms linear both effetto-sfocato;
+    
+
     &_nom {
+      @include ellipsis;
       grid-area: nom;
-      padding:10px 10px 0;
+      padding:10px 0px 0px 10px;
       font-weight: bold;
       font-size: 19px;
-      @include ellipsis;
     }
     &_description {
-      grid-area: description;
-      padding:5px 12px 10px 12px;
       @include ellipsis;
+      grid-area: description;
+      padding:5px 0px 10px 12px;
+      font-size: 15px;
+      font-weight: 400;
     }
     &_price {
       grid-area: price;
-      padding:0 24px 10px 0;
-      font-weight: bold;
+      padding:0px 24px 10px 24px;
+      font-weight:800;
       align-self: end;
     }
     &_checkbox {
       grid-area: checkbox;
-      background-color: rgb(137, 209, 191);
+      background-color: $color-tertiaire;
       width: 60px;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-right: -60px;
-      transition: margin-right 1s;
+      transition: margin-right 600ms;
       &_icon {
         color: white;
         font-size: 20px;
@@ -67,23 +73,17 @@ main{
           margin-right: 0;
           &_icon {
             transform: rotateZ(-360deg);
-            transition: transform 1s;
+            transition: transform 600ms;
           }
         }
       }
     }
   }
   
-  @keyframes monAnimation {
-    0% {
-      
-    }
-  }
 
   
-.button-com
-{@include flex-layout;
-  @include button;
+.button-com {
+ @include button;
   margin: 40px 0;
   &_span {
     margin: 0 50px;

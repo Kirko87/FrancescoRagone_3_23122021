@@ -1,4 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,700&family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@keyframes logo-preloader {
+  32% {
+    width: 50%;
+    height: 14%;
+  }
+  52% {
+    width: 60%;
+    height: 10%;
+  }
+  62% {
+    width: 30%;
+    height: 14%;
+  }
+  85% {
+    width: 50%;
+    height: 10%;
+  }
+  100% {
+    width: 20%;
+    height: 0%;
+    pointer-events: none;
+  }
+}
+@keyframes backgr-transparent {
+  0% {
+    background: #9356DC;
+  }
+  42% {
+    background: white;
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    pointer-events: none;
+  }
+}
+@keyframes dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(360deg);
+  }
+  41% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  81% {
+    transform: rotate(0deg);
+  }
+  95% {
+    transform: rotate(360deg);
+  }
+  100% {
+    width: 0;
+    border-color: transparent;
+  }
+}
+@keyframes text-preloader {
+  100% {
+    color: transparent;
+  }
+}
+@keyframes effetto-sfocato {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -17,11 +91,18 @@ body {
   margin-left: 25px;
   font-size: 20px;
   align-self: center;
+  pointer-events: stroke;
 }
 .header-menu_logo {
   height: 44%;
   width: 44%;
   margin: 20px 0 15px 70px;
+}
+
+.arrow {
+  display: flex;
+  text-decoration: none;
+  pointer-events: none;
 }
 
 .image-restaurant {
@@ -58,14 +139,14 @@ main {
   font-size: 16px;
   padding-bottom: 5px;
   font-weight: normal;
-  border-bottom: 3px solid #89d1bf;
+  border-bottom: 3px solid #99E2D0;
   width: 41px;
 }
 
 .entrees, .plats, .desserts {
   display: flex;
   flex-direction: column;
-  padding: 0 14px 40px;
+  padding: 0px 14px 40px;
   gap: 15px;
 }
 
@@ -79,39 +160,60 @@ main {
   border-radius: 15px;
   box-shadow: 1px 3px 12px #cecece;
   overflow: hidden;
+  animation: 500ms linear both effetto-sfocato;
+}
+.plat:nth-child(0) {
+  animation-delay: 0ms;
+}
+.plat:nth-child(1) {
+  animation-delay: 200ms;
+}
+.plat:nth-child(2) {
+  animation-delay: 400ms;
+}
+.plat:nth-child(3) {
+  animation-delay: 600ms;
+}
+.plat:nth-child(4) {
+  animation-delay: 800ms;
+}
+.plat:nth-child(5) {
+  animation-delay: 1000ms;
 }
 .plat_nom {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   grid-area: nom;
-  padding: 10px 10px 0;
+  padding: 10px 0px 0px 10px;
   font-weight: bold;
   font-size: 19px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .plat_description {
-  grid-area: description;
-  padding: 5px 12px 10px 12px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  grid-area: description;
+  padding: 5px 0px 10px 12px;
+  font-size: 15px;
+  font-weight: 400;
 }
 .plat_price {
   grid-area: price;
-  padding: 0 24px 10px 0;
-  font-weight: bold;
+  padding: 0px 24px 10px 24px;
+  font-weight: 800;
   align-self: end;
 }
 .plat_checkbox {
   grid-area: checkbox;
-  background-color: #89d1bf;
+  background-color: #99E2D0;
   width: 60px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: -60px;
-  transition: margin-right 1s;
+  transition: margin-right 600ms;
 }
 .plat_checkbox_icon {
   color: white;
@@ -122,25 +224,25 @@ main {
 }
 .plat:hover .plat_checkbox_icon {
   transform: rotateZ(-360deg);
-  transition: transform 1s;
+  transition: transform 600ms;
 }
 
-@keyframes monAnimation {}
 .button-com {
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: center;
-  color: white;
+  color: #fff;
   font-weight: 400;
   border-radius: 25px;
   height: 50px;
+  box-shadow: 0px 2px 10px #999898;
   background: linear-gradient(172deg, #FF79DA, #9356DC);
   margin: 40px 0;
+}
+.button-com:hover {
+  filter: brightness(120%);
+  box-shadow: 0px 2px 10px #505050;
 }
 .button-com_span {
   margin: 0 50px;
@@ -150,7 +252,7 @@ main {
 footer {
   padding: 0 20px;
   background-color: #353535;
-  color: white;
+  color: #fff;
   height: 200px;
 }
 
@@ -176,6 +278,11 @@ ul li .hands_svg::before {
   content: "\f4c4";
   margin-right: 8px;
   font-size: 11px;
+}
+
+.mail {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=restaurants.css.map */

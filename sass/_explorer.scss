@@ -1,7 +1,7 @@
 .explorer {
    @include flex-layout;
     padding: 36px 0;
-    background-color: rgb(246, 246, 246);
+    background-color: $color-background;
     &_title {
       margin: 0px 55px 15px;
       font-size: 24px;  

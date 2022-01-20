@@ -1,0 +1,83 @@
+@keyframes logo-preloader {
+    0% {
+    }
+    32%{
+     width: 50%;
+     height: 14%;
+    }
+    52%{
+        width: 60%;
+        height: 10%;
+    }
+    62%{
+        width: 30%;
+     height: 14%;
+    }
+    85%{
+        width: 50%;
+        height: 10%;
+    }
+    100% {
+      width: 20%;
+      height: 0%;
+      pointer-events: none;
+    }
+}
+
+@keyframes backgr-transparent {
+    0% {
+        background: $color-primaire;
+    }
+    42%{
+      background: rgb(255, 255, 255);
+    }
+    100% {
+      background: rgba(255, 255, 255, 0);
+      pointer-events: none;
+    }
+}
+
+@keyframes dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(360deg)
+  }
+  41%{
+    transform: rotate(0deg)
+  }
+  80%{
+    transform: rotate(360deg)
+  }
+  81%{
+    transform: rotate(0deg)
+  }
+  95%{
+    transform: rotate(360deg);
+  }
+  100% {
+    width: 0;
+    border-color: transparent;
+  }
+}
+
+@keyframes text-preloader {
+0%{
+
+}
+100%{
+    color: transparent;
+}
+}
+
+@keyframes effetto-sfocato {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
