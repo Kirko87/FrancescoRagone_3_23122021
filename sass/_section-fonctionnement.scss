@@ -13,6 +13,9 @@
     background-color: $color-background;
     height: 72px;
     margin-left: 8px;
+    &:hover{
+      box-shadow: 2px  2px  12px $color-shadow-buttons;
+    }
     &_title { 
       margin: 10px 0;
       align-self: flex-start;
@@ -47,6 +50,8 @@
      .fonction_ico_portable, .fonction_ico_list, .fonction_ico_boutique{
          filter:invert(51%) sepia(75%) saturate(5006%) 
          hue-rotate(243deg) brightness(91%) contrast(89%);   
+
+      
      }
   }
   }

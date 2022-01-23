@@ -12,6 +12,11 @@
 }
  .figure-index {
      @include box-resto;
+     transition: transform 500ms;
+     &:hover{
+        transform: scale(0.97);
+        box-shadow: 2px  3px  12px $color-shadow-buttons;
+    }
     .fig-palette_img, .fig-alafranc_img, .fig-delicesens_img {
      object-fit: cover;
      width: 100%;
@@ -29,31 +34,48 @@
      height: 75px;
      width: 100%;
      padding: 12px;
-     grid-template-columns: [first] 8fr [end] 1fr;
+     grid-template-areas: 
+     "span1 span1 coeur" 
+     "span2 span2 coeur";
      &_span1 {
-       grid-column-start: 1;
+       grid-area:span1;
        font-weight: 800;
        align-self: end;
        font-size: 18px;
      }
      &_span2 { 
-       grid-column-start: 1;
+       grid-area:span2;
        grid-row-start: 2; 
        font-size: 18px;
        align-self: center;
      }
      &_ico_coeur {
-       height: 25px;
-       width: 25px;  
+       grid-area: coeur;
+       height: 26.5px;
+       width: 26.5px;  
        place-self: center;
-       grid-row-start: 1;
-       grid-row-end:3;
-       margin-right: 15px;
-       &:checked{
-         pointer-events: auto;
-         cursor: pointer;
-         background-color: $color-primaire;
+       color: transparent;
+       
+       &:hover{
+       transition: 400ms;    
+       color: $color-primaire;
+       position: relative;
        }
+   
 }
 }
+}
+
+.cuore-vuoto{
+  pointer-events: none;
+  grid-area: coeur;
+  height: 25px;
+  width: 25px;  
+  place-self: center;
+  cursor: pointer;
+}
+
+.lien-figure{
+  text-decoration: none;
+  color: #000000;
 }

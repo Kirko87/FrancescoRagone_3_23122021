@@ -56,11 +56,8 @@
     font-size: 100%;
     user-select: none;
   }
-  90% {
-    font-size: 110%;
-  }
   100% {
-    font-size: 110%;
+    font-size: 140%;
     user-select: none;
     color: transparent;
     text-shadow: 1px 1px 1px transparent;
@@ -106,6 +103,7 @@ body {
   display: flex;
   text-decoration: none;
   pointer-events: none;
+  color: #000000;
 }
 
 .image-restaurant {
@@ -115,7 +113,8 @@ body {
 }
 
 .titre_menu {
-  display: flex;
+  display: grid;
+  grid-template-areas: "titre coeur";
   align-items: center;
   background-color: #f0f0f0;
   position: relative;
@@ -132,6 +131,28 @@ body {
   flex: 1;
   text-align: center;
   font-size: 24px;
+}
+
+.coeur-p {
+  grid-area: coeur;
+  height: 26.5px;
+  width: 26.5px;
+  place-self: center;
+  color: transparent;
+}
+.coeur-p:hover {
+  transition: 400ms;
+  color: #9356DC;
+  position: relative;
+}
+
+.coeur-v {
+  pointer-events: none;
+  grid-area: coeur;
+  height: 25px;
+  width: 25px;
+  place-self: center;
+  cursor: pointer;
 }
 
 main {
@@ -285,7 +306,7 @@ ul li .hands_svg::before {
 
 .mail {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=restaurants.css.map */
