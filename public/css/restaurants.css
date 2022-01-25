@@ -113,6 +113,7 @@ body {
 }
 
 .titre_menu {
+  font-family: "Shrikhand", cursive;
   display: grid;
   grid-template-areas: "titre coeur";
   align-items: center;
@@ -121,7 +122,6 @@ body {
   margin-top: -58px;
   border-radius: 40px 40px 0 0;
   height: 105px;
-  font-family: "Shrikhand", cursive;
   font-size: 29px;
 }
 .titre_menu .span_titre {
@@ -139,11 +139,13 @@ body {
   width: 26.5px;
   place-self: center;
   color: transparent;
+  opacity: 0;
 }
 .coeur-p:hover {
   transition: 400ms;
   color: #9356DC;
   position: relative;
+  opacity: 1;
 }
 
 .coeur-v {

@@ -12,7 +12,10 @@
 }
  .figure-index {
      @include box-resto;
+     position: relative;
+     transition: 400ms;
      &:hover{
+        transform: scale(0.95);
         box-shadow:1px  1px  12px $color-shadow;
     }
     .fig-palette_img, .fig-alafranc_img, .fig-delicesens_img {
@@ -24,14 +27,14 @@
     .fig-noteench_img {
      object-fit: cover;
      width: 100%;
-     height: 175px;
+     height: 180px;
      object-position: 0px -147px;
     }
     .figca-resto {
      display: grid;   
      height: 75px;
      width: 100%;
-     padding: 12px;
+     padding: 10px 12px;
      grid-template-areas: 
      "span1 span1 coeur" 
      "span2 span2 coeur";
@@ -53,10 +56,12 @@
        width: 26.5px;  
        place-self: center;
        color: transparent;
+       opacity: 0;
        &:hover{
        transition: 400ms;    
        color: $color-primaire;
        position: relative;
+       opacity: 1;
        }
 }
 }

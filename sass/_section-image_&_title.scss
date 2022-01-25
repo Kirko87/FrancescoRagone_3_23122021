@@ -5,7 +5,8 @@
 }
 
 .titre_menu
-{ display: grid;
+{ font-family: 'Shrikhand', cursive;
+  display: grid;
   grid-template-areas: "titre coeur";
   align-items: center;
   background-color: $color-background;
@@ -13,7 +14,6 @@
   margin-top: -58px;
   border-radius: 40px 40px 0 0;
   height: 105px;
-  font-family: 'Shrikhand', cursive;
   font-size: 29px;
   .span_titre{
     margin-left: 18px;
@@ -24,19 +24,21 @@
     font-size: 24px;
   }
 }
-
 .coeur-p {
   grid-area: coeur;
   height: 26.5px;
   width: 26.5px;  
   place-self: center;
   color: transparent;
+  opacity: 0;
   &:hover{
   transition: 400ms;    
   color: $color-primaire;
   position: relative;
+  opacity: 1;
   }
 }
+
 .coeur-v{
   pointer-events: none;
   grid-area: coeur;
