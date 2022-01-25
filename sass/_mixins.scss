@@ -1,5 +1,5 @@
 @mixin box-resto{
-    background-color: white;
+    background-color: #FFFFFF;
     border-radius: 15px;
     overflow: hidden;
     height: 255px;
@@ -41,4 +41,15 @@
     }
 }
 
+@mixin chiaro-scuro ($color-CS:$color-tertiaire){
+    @if (lightness($color-CS) <25%){
+        $color-CS:lighten($color-CS, 60%);
+    }@else{
+        $color-CS:darken($color-CS, 40%);
+        }
+        color:$color-CS;
+        background-color: $color-tertiaire;
+    }
+
+    
 

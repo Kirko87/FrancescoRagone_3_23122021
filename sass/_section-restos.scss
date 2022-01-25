@@ -12,10 +12,8 @@
 }
  .figure-index {
      @include box-resto;
-     transition: transform 500ms;
      &:hover{
-        transform: scale(0.97);
-        box-shadow: 2px  3px  12px $color-shadow-buttons;
+        box-shadow:1px  1px  12px $color-shadow;
     }
     .fig-palette_img, .fig-alafranc_img, .fig-delicesens_img {
      object-fit: cover;
@@ -55,13 +53,11 @@
        width: 26.5px;  
        place-self: center;
        color: transparent;
-       
        &:hover{
        transition: 400ms;    
        color: $color-primaire;
        position: relative;
        }
-   
 }
 }
 }
@@ -79,3 +75,13 @@
   text-decoration: none;
   color: #000000;
 }
+
+.nouveau{
+  @include chiaro-scuro;
+   position: absolute;
+   padding: 5px 9px;
+   font-weight: 500;
+   border-radius: .2rem;
+   margin: 15px;
+   right: 5%;
+  }

@@ -14,7 +14,7 @@
     height: 72px;
     margin-left: 8px;
     &:hover{
-      box-shadow: 2px  2px  12px $color-shadow-buttons;
+      box-shadow: 1px  1px  6px $color-shadow;
     }
     &_title { 
       margin: 10px 0;
@@ -31,7 +31,7 @@
       height: 25px;
       width: 25px;  
       background-color: $color-primaire;
-      color: white;
+      color: #ffffff;
       margin-left: -12px;
     }
     &_ico_portable, &_ico_list, &_ico_boutique {
@@ -49,9 +49,7 @@
   { background-color: $color-div-hover;
      .fonction_ico_portable, .fonction_ico_list, .fonction_ico_boutique{
          filter:invert(51%) sepia(75%) saturate(5006%) 
-         hue-rotate(243deg) brightness(91%) contrast(89%);   
-
-      
+         hue-rotate(243deg) brightness(91%) contrast(89%);
      }
   }
   }
