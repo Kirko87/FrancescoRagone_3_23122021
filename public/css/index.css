@@ -53,11 +53,11 @@
 }
 @keyframes text-preloader {
   0% {
-    font-size: 100%;
+    font-size: 300%;
     user-select: none;
   }
   100% {
-    font-size: 140%;
+    font-size: 170%;
     user-select: none;
     color: transparent;
     text-shadow: 1px 1px 1px transparent;
@@ -116,6 +116,21 @@
   animation-fill-mode: forwards;
 }
 
+@media (min-width: 992px) {
+  .header_logo_preloader {
+    margin-top: 20%;
+  }
+
+  .dual-ring {
+    margin-top: 40%;
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .pre-loader_text {
+    margin-top: 65%;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -155,6 +170,24 @@ body {
   margin: 15px;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .header_logo {
+    height: 40%;
+    width: 40%;
+    margin: 20px 0 15px;
+  }
+
+  .position_span {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .header_logo {
+    height: 15%;
+    width: 15%;
+    margin: 20px 0 15px;
+  }
+}
 .explorer {
   display: flex;
   flex-direction: column;
@@ -194,15 +227,30 @@ body {
 .explorer_button_span {
   margin: 0 24px;
   font-size: 16px;
+  user-select: none;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .explorer {
+    padding: 36px 0 0;
+  }
+  .explorer_title {
+    font-size: 27px;
+  }
+  .explorer_content {
+    font-size: 22px;
+  }
+}
 #fonctions {
+  padding: 40px 20px 67px;
+}
+
+.buttons-container {
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: center;
   gap: 22px;
-  padding: 40px 20px 67px;
 }
 
 .fonction {
@@ -214,6 +262,7 @@ body {
   background-color: #f0f0f0;
   height: 72px;
   margin-left: 8px;
+  user-select: none;
 }
 .fonction:hover {
   box-shadow: 1px 1px 6px #cecece;
@@ -253,14 +302,63 @@ body {
   filter: invert(51%) sepia(75%) saturate(5006%) hue-rotate(243deg) brightness(91%) contrast(89%);
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .buttons-container {
+    flex-direction: row;
+  }
+
+  #fonctions {
+    padding: 10px 20px 30px;
+  }
+
+  .fonction {
+    gap: 12px;
+  }
+  .fonction_title {
+    font-size: 27px;
+    margin: 10px 0px 32px;
+  }
+  .fonction_span {
+    padding-right: 26px;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .buttons-container {
+    flex-direction: row;
+    height: 150px;
+  }
+
+  #fonctions {
+    padding: 10px 20px 30px;
+  }
+
+  .fonction {
+    gap: 12px;
+  }
+  .fonction:nth-child(2) {
+    align-self: flex-end;
+  }
+  .fonction_title {
+    font-size: 27px;
+    margin: 10px 0px 32px;
+  }
+  .fonction_span {
+    padding-right: 26px;
+    text-align: center;
+  }
+}
 #restaurants {
+  padding: 38px 20px 65px;
+  background-color: #f0f0f0;
+}
+
+.menus-container {
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: center;
   gap: 18px;
-  padding: 38px 20px 65px;
-  background-color: #f0f0f0;
 }
 
 .restaurant_title {
@@ -354,6 +452,29 @@ body {
   right: 5%;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .restaurant_title {
+    font-size: 27px;
+    margin: 0px 0px 32px;
+  }
+
+  .menus-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+@media (min-width: 992px) {
+  .menus-container:last-child {
+    align-self: center;
+  }
+
+  .menus-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
 footer {
   padding: 0 20px;
   background-color: #353535;
@@ -388,6 +509,38 @@ ul li .hands_svg::before {
 .mail {
   text-decoration: none;
   color: #ffffff;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  footer {
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    margin-top: 25px;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    text-align: center;
+  }
+
+  .footer-div_logo {
+    height: 25%;
+    width: 25%;
+    margin: 25px 0 20px;
+    filter: invert(100%) sepia(5%) saturate(16%) hue-rotate(218deg) brightness(105%) contrast(100%);
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 64px;
+    margin-top: 25px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

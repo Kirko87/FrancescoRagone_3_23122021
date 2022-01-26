@@ -20,3 +20,28 @@
   pointer-events: none;
   color: #000000;
 }
+
+@media (min-width: 768px) and (max-width: 991px){
+  
+  .header-menu{ 
+    gap: 14%;
+  
+  .fa-arrow-left{
+    font-size: 30px;     
+    } 
+  }
+}
+
+@media (min-width: 992px){
+  
+  .header-menu{ 
+    gap: 25%;
+  
+  .fa-arrow-left{
+    font-size: 30px;     
+    }
+    &_logo{
+      height: 35%;
+      width: 35%;}
+  } 
+}

@@ -1,55 +1,108 @@
 #fonctions
-{@include flex-layout;
- gap: 22px; 
+{
  padding: 40px 20px 67px;
 }
 
+.buttons-container{
+  @include flex-layout;
+  gap: 22px;
+}
+
 .fonction {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-radius: 20px;
+  box-shadow: 1px  3px  12px $color-shadow;        
+  background-color: $color-background;
+  height: 72px;
+  margin-left: 8px;
+  user-select: none;
+  &:hover{
+    box-shadow: 1px  1px  6px $color-shadow;
+  }
+  &_title { 
+    margin: 10px 0;
+    align-self: flex-start;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  &_numero {
     display: flex;
     align-items: center;
-    gap: 25px;
-    border-radius: 20px;
-    box-shadow: 1px  3px  12px $color-shadow;        
-    background-color: $color-background;
-    height: 72px;
-    margin-left: 8px;
-    &:hover{
-      box-shadow: 1px  1px  6px $color-shadow;
-    }
-    &_title { 
-      margin: 10px 0;
-      align-self: flex-start;
-      font-size: 24px;
-      font-weight: 800;
-    }
-    &_numero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position:absolute;
-      border-radius: 12px;
-      height: 25px;
-      width: 25px;  
-      background-color: $color-primaire;
-      color: #ffffff;
-      margin-left: -12px;
-    }
-    &_ico_portable, &_ico_list, &_ico_boutique {
-      height: 20px;
-      width: 20px;  
-      margin-left: 35px;
-      filter: invert(44%) sepia(96%) saturate(7%) 
-              hue-rotate(24deg) brightness(94%) contrast(93%);
-    }
-    &_span {
-      justify-self: center;
-      font-weight: 600;  
-    }
-    &:hover 
-  { background-color: $color-div-hover;
-     .fonction_ico_portable, .fonction_ico_list, .fonction_ico_boutique{
-         filter:invert(51%) sepia(75%) saturate(5006%) 
-         hue-rotate(243deg) brightness(91%) contrast(89%);
-     }
+    justify-content: center;
+    position:absolute;
+    border-radius: 12px;
+    height: 25px;
+    width: 25px;  
+    background-color: $color-primaire;
+    color: #ffffff;
+    margin-left: -12px;
   }
+  &_ico_portable, &_ico_list, &_ico_boutique {
+    height: 20px;
+    width: 20px;  
+    margin-left: 35px;
+    filter: invert(44%) sepia(96%) saturate(7%) 
+            hue-rotate(24deg) brightness(94%) contrast(93%);
   }
+  &_span {
+    justify-self: center;
+    font-weight: 600;  
+  }
+  &:hover {
+    background-color: $color-div-hover;
+    .fonction_ico_portable, .fonction_ico_list, .fonction_ico_boutique{
+     filter:invert(51%) sepia(75%) saturate(5006%) 
+            hue-rotate(243deg) brightness(91%) contrast(89%);
+  }
+ }
+}
+
+  @media (min-width: 768px) and (max-width: 991px){
+ 
+   .buttons-container{
+    flex-direction: row;
+  }
+   #fonctions{
+    padding: 10px 20px 30px;
+  }
+  .fonction{
+   gap: 12px;
+    &_title{
+    font-size: 27px;  
+    margin: 10px 0px 32px;
+    }
+    &_span{
+    padding-right: 26px;
+    text-align: center;
+    }
+  }
+}
+
+  @media (min-width: 992px){
+
+    .buttons-container{
+      flex-direction: row;
+      height: 150px;
+    }
+     #fonctions{
+      padding: 10px 20px 30px;
+    }
+    .fonction{
+     gap: 12px;
+      &:nth-child(2){
+        align-self: flex-end;
+      }
+      &_title{
+      font-size: 27px;  
+      margin: 10px 0px 32px;
+      }
+      &_span{
+      padding-right: 26px;
+      text-align: center;
+      }
+    }
+  }
+  
+  

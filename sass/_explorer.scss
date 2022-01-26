@@ -19,7 +19,25 @@
       &_span {
         margin: 0 24px;
         font-size: 16px;  
+        user-select: none;
       }
     }
   }
   
+  @media (min-width: 768px) and (max-width: 991px){
+  
+    .explorer{
+      padding: 36px 0 0;
+      &_title{
+        font-size: 27px;
+      }
+      &_content{
+        font-size: 22px;
+      }
+    }
+
+  }
+  @media (min-width: 992px){
+    
+    
+  }

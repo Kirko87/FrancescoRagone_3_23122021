@@ -1,21 +1,26 @@
-#restaurants
-{  @include flex-layout;
-    gap: 18px;
+#restaurants{
     padding: 38px 20px 65px;
     background-color: $color-background;
 }
-.restaurant_title
-{ margin: 10px 0;
+
+.menus-container{
+  @include flex-layout;
+  gap: 18px;
+}
+
+.restaurant_title{
+ margin: 10px 0;
  align-self: flex-start;
  font-size: 24px;
  font-weight: 800;
 }
- .figure-index {
-     @include box-resto;
-     position: relative;
-     transition: 400ms;
-     &:hover{
-        transform: scale(0.95);
+
+.figure-index{
+    @include box-resto;
+    position: relative;
+   transition: 400ms;
+    &:hover{
+       transform: scale(0.95);
         box-shadow:1px  1px  12px $color-shadow;
     }
     .fig-palette_img, .fig-alafranc_img, .fig-delicesens_img {
@@ -63,9 +68,9 @@
        position: relative;
        opacity: 1;
        }
-}
-}
-}
+     }
+   }
+ }
 
 .cuore-vuoto{
   pointer-events: none;
@@ -89,4 +94,29 @@
    border-radius: .2rem;
    margin: 15px;
    right: 5%;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px){
+    .restaurant_title{
+      font-size: 27px;
+      margin:0px 0px 32px;
+    }
+    .menus-container{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: auto;
+      
+    }
+
+  }
+  @media (min-width: 992px){
+    .menus-container:last-child{
+      align-self: center;
+    }
+    .menus-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+       
+     }
   }

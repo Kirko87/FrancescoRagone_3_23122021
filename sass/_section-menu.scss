@@ -79,14 +79,37 @@ main{
       }
     }
   }
-  
-
-  
+.container-button-com{
+  @include flex-layout;
 .button-com {
  @include button;
   margin: 40px 0;
   &_span {
-    margin: 0 50px;
-    font-size: 16px;  
+    text-align: center;
+    font-size: 16px; 
+    user-select: none; 
+    margin: 0px 48px;
+  }    
 }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .liste_menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container-button-com{
+    grid-column: 2;
+  }
+}
+
+@media (min-width: 992px){
+  
+  .liste_menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container-button-com{
+    grid-column: 2;
+  }
 }

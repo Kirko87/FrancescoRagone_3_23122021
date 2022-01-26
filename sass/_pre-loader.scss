@@ -42,3 +42,26 @@
     animation-fill-mode: forwards;
   }
   
+  @media (min-width: 768px) and (max-width: 991px){
+  
+  
+
+  }
+  @media (min-width: 992px){
+
+    .header_logo_preloader{
+      margin-top: 20%;
+    }
+
+    .dual-ring{
+      margin-top: 40%;
+      width: 7.5rem;
+      height: 7.5rem;
+    }
+
+    .pre-loader_text{
+        margin-top: 65%;
+  
+    }
+    
+  }

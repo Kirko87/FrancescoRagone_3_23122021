@@ -26,3 +26,26 @@
     margin: 15px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 991px){
+  .header_logo{
+    height: 40%;
+    width: 40%;
+    margin: 20px 0 15px;
+  }
+
+.position{
+  &_span{
+   font-size:20px;
+  }
+}
+
+}
+@media (min-width: 992px){
+  
+  .header_logo{
+    height: 15%;
+    width: 15%;
+    margin: 20px 0 15px;
+  }
+}
